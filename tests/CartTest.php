@@ -1,20 +1,20 @@
 <?php
 
-namespace Gloudemans\Tests\Shoppingcart;
+namespace LithiumDev\Tests\Shoppingcart;
 
 use Mockery;
 use PHPUnit\Framework\Assert;
-use Gloudemans\Shoppingcart\Cart;
+use LithiumDev\LaravelCart\Cart;
 use Orchestra\Testbench\TestCase;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Collection;
-use Gloudemans\Shoppingcart\CartItem;
+use LithiumDev\LaravelCart\CartItem;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Session\SessionManager;
 use Illuminate\Contracts\Auth\Authenticatable;
-use Gloudemans\Shoppingcart\ShoppingcartServiceProvider;
-use Gloudemans\Tests\Shoppingcart\Fixtures\ProductModel;
-use Gloudemans\Tests\Shoppingcart\Fixtures\BuyableProduct;
+use LithiumDev\LaravelCart\CartServiceProvider;
+use LithiumDev\Tests\Shoppingcart\Fixtures\ProductModel;
+use LithiumDev\Tests\Shoppingcart\Fixtures\BuyableProduct;
 
 class CartTest extends TestCase
 {
@@ -28,7 +28,7 @@ class CartTest extends TestCase
      */
     protected function getPackageProviders($app)
     {
-        return [ShoppingcartServiceProvider::class];
+        return [CartServiceProvider::class];
     }
 
     /**
@@ -340,7 +340,7 @@ class CartTest extends TestCase
 
     /**
      * @test
-     * @expectedException \Gloudemans\Shoppingcart\Exceptions\InvalidRowIDException
+     * @expectedException \LithiumDev\LaravelCart\Exceptions\InvalidRowIDException
      */
     public function it_will_throw_an_exception_if_a_rowid_was_not_found()
     {
@@ -622,7 +622,7 @@ class CartTest extends TestCase
 
     /**
      * @test
-     * @expectedException \Gloudemans\Shoppingcart\Exceptions\UnknownModelException
+     * @expectedException \LithiumDev\LaravelCart\Exceptions\UnknownModelException
      * @expectedExceptionMessage The supplied model SomeModel does not exist.
      */
     public function it_will_throw_an_exception_when_a_non_existing_model_is_being_associated()
@@ -917,7 +917,7 @@ class CartTest extends TestCase
     /**
      * Get an instance of the cart.
      *
-     * @return \Gloudemans\Shoppingcart\Cart
+     * @return \LithiumDev\LaravelCart\Cart
      */
     private function getCart()
     {

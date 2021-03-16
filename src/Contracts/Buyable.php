@@ -1,6 +1,6 @@
 <?php
 
-namespace Gloudemans\Shoppingcart\Contracts;
+namespace LithiumDev\LaravelCart\Contracts;
 
 interface Buyable
 {

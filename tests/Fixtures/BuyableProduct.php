@@ -1,8 +1,8 @@
 <?php
 
-namespace Gloudemans\Tests\Shoppingcart\Fixtures;
+namespace LithiumDev\Tests\Shoppingcart\Fixtures;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use LithiumDev\LaravelCart\Contracts\Buyable;
 
 class BuyableProduct implements Buyable
 {

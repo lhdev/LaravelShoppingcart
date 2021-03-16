@@ -1,16 +1,16 @@
 <?php
 
-namespace Gloudemans\Shoppingcart;
+namespace LithiumDev\LaravelCart;
 
 use Closure;
 use Illuminate\Support\Collection;
 use Illuminate\Session\SessionManager;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Contracts\Events\Dispatcher;
-use Gloudemans\Shoppingcart\Contracts\Buyable;
-use Gloudemans\Shoppingcart\Exceptions\UnknownModelException;
-use Gloudemans\Shoppingcart\Exceptions\InvalidRowIDException;
-use Gloudemans\Shoppingcart\Exceptions\CartAlreadyStoredException;
+use LithiumDev\LaravelCart\Contracts\Buyable;
+use LithiumDev\LaravelCart\Exceptions\UnknownModelException;
+use LithiumDev\LaravelCart\Exceptions\InvalidRowIDException;
+use LithiumDev\LaravelCart\Exceptions\CartAlreadyStoredException;
 
 class Cart
 {
@@ -55,7 +55,7 @@ class Cart
      * Set the current cart instance.
      *
      * @param string|null $instance
-     * @return \Gloudemans\Shoppingcart\Cart
+     * @return \LithiumDev\LaravelCart\Cart
      */
     public function instance($instance = null)
     {
@@ -85,7 +85,7 @@ class Cart
      * @param float     $price
      * @param array     $options
      * @param float     $taxrate
-     * @return \Gloudemans\Shoppingcart\CartItem
+     * @return \LithiumDev\LaravelCart\CartItem
      */
     public function add($id, $name = null, $qty = null, $price = null, array $options = [], $taxrate = null)
     {
@@ -121,7 +121,7 @@ class Cart
      *
      * @param string $rowId
      * @param mixed  $qty
-     * @return \Gloudemans\Shoppingcart\CartItem
+     * @return \LithiumDev\LaravelCart\CartItem
      */
     public function update($rowId, $qty)
     {
@@ -183,7 +183,7 @@ class Cart
      * Get a cart item from the cart by its rowId.
      *
      * @param string $rowId
-     * @return \Gloudemans\Shoppingcart\CartItem
+     * @return \LithiumDev\LaravelCart\CartItem
      */
     public function get($rowId)
     {
@@ -471,7 +471,7 @@ class Cart
      * @param float     $price
      * @param array     $options
      * @param float     $taxrate
-     * @return \Gloudemans\Shoppingcart\CartItem
+     * @return \LithiumDev\LaravelCart\CartItem
      */
     private function createCartItem($id, $name, $qty, $price, array $options, $taxrate)
     {

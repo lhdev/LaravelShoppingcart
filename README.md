@@ -13,7 +13,7 @@ Install the package through [Composer](http://getcomposer.org/).
 
 Run the Composer require command from the Terminal:
 
-    composer require hardevine/shoppingcart
+    composer require lhdev/laravelcart
     
 If you're using Laravel 5.5, this is all there is to do. 
 
@@ -21,11 +21,11 @@ Should you still be on version 5.4 of Laravel, the final steps for you are to ad
 
 Add a new line to the `providers` array:
 
-	Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class
+	LithiumDev\LaravelCart\CartServiceProvider::class
 
 And optionally add a new line to the `aliases` array:
 
-	'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+	'Cart' => LithiumDev\LaravelCart\Facades\Cart::class,
 
 Now you're ready to start using the shoppingcart in your application.
 
@@ -81,7 +81,7 @@ This way you can just pass the `add()` method a model and the quantity and it wi
 
 The path to the `Buyable` interface is:
 
-    Gloudemans\Shoppingcart\Contracts\Buyable;
+    LithiumDev\LaravelCart\Contracts\Buyable;
 
 **As an added bonus it will automatically associate the model with the CartItem**
 
@@ -360,7 +360,7 @@ Example:
 
 namespace App\Models;
 
-use Gloudemans\Shoppingcart\Contracts\Buyable;
+use LithiumDev\LaravelCart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 
 class Product exends Model implements Buyable {
@@ -390,13 +390,13 @@ To save cart into the database so you can retrieve it later, the package needs t
 By default the package will use the default database connection and use a table named `shoppingcart`.
 If you want to change these options, you'll have to publish the `config` file.
 
-    php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+    php artisan vendor:publish --provider="LithiumDev\LaravelCart\CartServiceProvider" --tag="config"
 
 This will give you a `cart.php` config file in which you can make the changes.
 
 To make your life easy, the package also includes a ready to use `migration` which you can publish by running:
 
-    php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="migrations"
+    php artisan vendor:publish --provider="LithiumDev\LaravelCart\CartServiceProvider" --tag="migrations"
     
 This will place a `shoppingcart` table's migration file into `database/migrations` directory. Now all you have to do is run `php artisan migrate` to migrate your database.
 

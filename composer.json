@@ -1,12 +1,16 @@
 {
-    "name": "hardevine/shoppingcart",
-    "description": "Laravel Shoppingcart",
+    "name": "lhdev/laravelcart",
+    "description": "Laravel Cart",
     "keywords": ["laravel", "shoppingcart"],
     "license": "MIT",
     "authors": [
         {
             "name": "Rob Gloudemans",
             "email": "info@robgloudemans.nl"
+        },
+        {
+            "name": "Troy Siedsma",
+            "email": "tsiedsma@lithiumhosting.com"
         }
     ],
     "require": {
@@ -21,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Gloudemans\\Shoppingcart\\": "src/"
+            "LithiumDev\\LaravelCart\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Gloudemans\\Tests\\Shoppingcart\\": "tests/"
+            "LithiumDev\\Tests\\LaravelCart\\": "tests/"
         }
     },
     "suggest": {
@@ -36,10 +40,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Gloudemans\\Shoppingcart\\ShoppingcartServiceProvider"
+                "LithiumDev\\LaravelCart\\CartServiceProvider"
             ],
             "aliases": {
-                "Cart": "Gloudemans\\Shoppingcart\\Facades\\Cart"
+                "Cart": "LithiumDev\\LaravelCart\\Facades\\Cart"
             }
         }
     }
