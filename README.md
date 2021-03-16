@@ -1,21 +1,17 @@
-## LaravelShoppingcart
-[![Build Status](https://travis-ci.org/hardevine/LaravelShoppingcart.png?branch=master)](https://travis-ci.org/hardevine/LaravelShoppingcart)
-[![Total Downloads](https://poser.pugx.org/hardevine/shoppingcart/downloads.png)](https://packagist.org/packages/hardevine/shoppingcart)
-[![Latest Stable Version](https://poser.pugx.org/hardevine/shoppingcart/v/stable)](https://packagist.org/packages/hardevine/shoppingcart)
-[![Latest Unstable Version](https://poser.pugx.org/hardevine/shoppingcart/v/unstable)](https://packagist.org/packages/hardevine/shoppingcart)
+## LaravelCart
 [![License](https://poser.pugx.org/gloudemans/shoppingcart/license)](https://packagist.org/packages/gloudemans/shoppingcart)
 
-A simple shoppingcart implementation for Laravel.
+A simple Shopping Cart implementation for Laravel.
 
 ## Installation
 
 Install the package through [Composer](http://getcomposer.org/). 
 
-Run the Composer require command from the Terminal:
+Run the Composer require command from the Terminal: (You will need to add this repo as a VCS source first!)
 
     composer require lithiumdev/laravelcart
     
-If you're using Laravel 5.5, this is all there is to do. 
+If you're using Laravel 5.5+, this is all there is to do. 
 
 Should you still be on version 5.4 of Laravel, the final steps for you are to add the service provider of the package and alias the package. To do this open your `config/app.php` file.
 
@@ -45,7 +41,7 @@ Look at one of the following topics to learn more about LaravelShoppingcart
 
 ## Usage
 
-The shoppingcart gives you the following methods to use:
+The Cart gives you the following methods to use:
 
 ### Cart::add()
 
